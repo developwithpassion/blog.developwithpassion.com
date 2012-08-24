@@ -1,0 +1,29 @@
+---
+layout: post
+title: "TDD Live"
+comments: true
+date: 2006-10-25 09:00
+categories:
+- .net 2.0
+- c sharp
+- presentations
+---
+
+There is no better way to appreciate the effectiveness of Test Driven Development, that seeing it done real time. Today I spent a couple of hours with the good people at [Focus](http://www.focus.ca/), and was attempting to cover in a small 4 hour session:
+<ul>
+<li>Test Driven Development</li>
+<li>Interface Based Programming</li>
+<li>Dependency Inversion Principle - followed by Dependency Injection</li>
+<li>Mock Objects</li></ul>
+
+In such a short amount of time you can only hope to cover these topics at a pretty high (and quick) level.
+
+The fun part, was coming up with a problem on the fly that I could use to demonstrate the values of Test Driven Development/Behavior Driven Development. By not going to the session with a prepared application, it allowed me to drive out a solution right before their eyes, and hopefully left them with a good impression as to the effectiveness that TDD can bring into an evolutionary design process.
+
+ 
+
+ 
+
+
+
+

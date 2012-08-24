@@ -1,0 +1,22 @@
+---
+layout: post
+title: "NBDN Remote - (May 24,2010)"
+comments: true
+date: 2010-04-01 09:00
+categories:
+- training
+---
+
+The first official [Nothin But .Net](http://www.developwithpassion.com/training.oo) remote course will be taking place at the end of May. Having had a very [successful pilot](http://blog.developwithpassion.com/NothinButNetRemotePilotReviews.aspx). I am confident that people who are unable to make it to a public in-person course; will find the format of the remote course a great opportunity to take part in a great week of training right from their own house!!   
+Based on feedback from attendees of the pilot course, here are some recommended items that you will want to have to capitalize on the remote course:   
+-Dual Monitor Setup   
+-VOIP HeadSet    
+-DSL/Cable Internet Connection   
+As with all public courses, the attendee limit for the course is capped at 16.   
+For more information on the course, or to register, go here: <a title="http://nbdnremotemay2010.eventbrite.com/" href="http://nbdnremotemay2010.eventbrite.com/">http://nbdnremotemay2010.eventbrite.com/</a>  
+[Develop With Passion](http://www.developwithpassion.com)!!  
+[](http://www.developwithpassion.com)
+
+
+
+

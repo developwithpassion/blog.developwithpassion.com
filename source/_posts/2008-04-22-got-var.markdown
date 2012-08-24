@@ -1,0 +1,34 @@
+---
+layout: post
+title: "Got var?"
+comments: true
+date: 2008-04-22 09:00
+categories:
+- c sharp
+---
+
+I had a couple of interesting discussions at the recent MVP summit around my preference to using the var keyword in my recent set of codebases.   
+I argued that people who are already in the habit of expressively naming their variables are going to be much more open to dropping the extra "noise" of specifying the type on both sides of the variable declaration.   
+Having been exposed to dynamic languages (Ruby) has definitely altered my perspective with regards to considering this:   
+
+
+{% codeblock lang:csharp %}
+IList<Customer> listOfCustomers = new List<Customer>() 
+{% endcodeblock %}
+
+Much more noisy than this: 
+
+{% codeblock lang:csharp %}
+var listOfCustomers = new List<Customer>() 
+{% endcodeblock %}
+
+
+As I strive toward more readable, intent revealing code, I find myself looking at the intent behind the usage of the variable coupled with a meaningful name, vs the actual type. In reality, I find the the argument to not use var is a moot point in a static environment that provides you with all the information you need once you hit the "."
+
+How do you var?
+
+Develop With Passion!!
+
+
+
+

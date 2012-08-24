@@ -1,0 +1,24 @@
+---
+layout: post
+title: "On A Trip"
+comments: true
+date: 2010-03-06 09:00
+categories:
+- general
+---
+For everyone who is anxiously waiting for the new screencasts to get posted, you will have to wait 2 more weeks. Along with some silverlight publishing issues that I have been running into (for the last 2 screencasts) we have been on a little family trip. Being that the budget is tight, we decided to drive all the way from Cypress County,AB to Miami Florida. The journey itself was amazing. Our kids are fantastic road warriors which has been a huge blessing. Once in Miami, we flew to Dominican Republic (where we currently are) to have a week of vacation followed by a week of work.
+
+Aside from a few days of rain the trip so far has been incredibly memorable. The other day we all went jetting around the landscape in Dune Buggies, this trip culminated in us swimming in a cave and tasting pure chocolate and coffee. Most of these events were firsts for our family and are something all of us will remember forever. It was awesome for the kids to be able to see how the farming community around here lives!!
+
+I am sure I will do a screencast on the topic if people are interested, otherwise thank you for waiting patiently for the screencasts.
+
+On a side note, if anyone has experience publishing ScreenFlow based screencasts as Silverlight videos to the Azure cloud, please get in contact with me as I could use some advice!!
+
+Develop With Passion!!
+
+
+
+
+
+
+

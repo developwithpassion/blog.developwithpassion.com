@@ -1,0 +1,18 @@
+---
+layout: post
+title: "Got Icons?"
+comments: true
+date: 2008-05-02 09:00
+categories:
+- programming
+---
+
+I am currently trying to add some polish to the application that I am working on, and I stumbled upon this post [here](http://blogs.msdn.com/brada/archive/2006/06/06/618797.aspx) that pointed to a location that contained a zip file with a majority of the standard icons that Microsoft uses in both Visual Studio and the Office Suite. For those of you running Visual Studio 2008 you can find the zip file in the following location:  
+C:\%vs install path%\Common7\VS2008ImageLibrary\1033  
+In that folder you will find a zip file named: VS2008ImageLibrary.zip.  
+Just extract the contents of that zip file and you have more icons that you can probably work with!!  
+Develop With Passion!!
+
+
+
+

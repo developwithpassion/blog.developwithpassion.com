@@ -1,0 +1,25 @@
+---
+layout: post
+title: "Don't play limbo with your goals"
+comments: true
+date: 2008-05-28 09:00
+categories:
+- inspiration
+---
+
+The last 2 years I have been blessed beyond measure with the ability to travel around the world with my family doing exactly what I love doing, writing and teaching software development.   
+Having had the opportunity to share with over 200 developers now in very personal settings, a couple of themes have begun to emerge and there are patterns that I see in the choices that I see people making/not making with respects to their goals for their lives and careers.   
+I have always had a very cavalier attitude toward my job. And it has been simply this: If I am not enjoying the place that I am currently engaged, and I have done everything in my power to impact change for the betterment of the work environment that I am in, it is time for me to leave. I do not have time to waste being in a place where I do not feel challenged and happy about the work that I am doing. Develop with Passion is not just a cheesy saying, it is the way I have lived my development career out.  
+This has always been my approach to maintaining a career where I always feel good about waking up in the morning to go to work. I learned early on that playing limbo with the goals my family and I had set was a slippery slope that can sometimes be hard to bounce back from. Several years ago, I was in a job with a great company. Awesome family atmosphere, lots of projects to work on, relaxed work environment. I had gotten to a point where I was feeling fairly comfortable and not overly challenged. I had a very open supervisor who I shared my concerns with, and I basically ended up giving my notice before I had any other jobs lined up. Keep in mind, that at the time, we had 2 kids and one on the way shortly. My wife and I have always shared the belief that God does not want us in a place where we feel comfortable; and it is in those places where we feel a little uneasy that the potential for big growth can occur. I decided to throw myself out there and see what God presented to us!! It was one of the best decisions I could have made.   
+What is my point to this little story? So many people I meet daily have not sat down with themselves/their families and set out goals that they can use as a filter to enable them to make decisions that will ultimately affect all facets of their lives. My wife and I sat down and set goals with each other almost immediately after we were married. That initial list was instrumental to us making a lot of decisions early on that would set the stage for the coming years of our marriage and my career.   
+We had set the bar high on what we wanted to achieve. Looking around at our situation at the time would have given us no reason to set the goals to the level that we had. We just realized that we were not doing ourselves any justice if we set the bar too low for what we wanted to achieve. Some of the largest hurdles you will have to overcome are the ones you will put up for yourself in your own mind. When you sit down and start "dreaming big" just let go and see what you come up with, you may surprise yourself.   
+Whenever I made/make decisions with regards to contracts I am going to get engaged with, people I am going to get involved with; I always make sure that no interaction that results will cause me to lower my own bar with regards to the quality standards that I have chosen, and the goals I am currently striving after. This makes me very particular about the projects and people I get involved with, but every interaction that I have is meaningful and beneficial.   
+Instead of constantly lowering the bar with the goals you have set for yourself, it is time to reevaluate the goals you are striving for and work towards making the, sometimes, tough decisions to achieve the goals you have. Most of all, make sure that you have patience to attain that end goal. The Israelites waited in the desert for 40 years until God handed the promise land to them!! Try not to buy into the current MicroWave Culture, where results are manifested without any effort involved on our part!! Anything worth having should not come easy, you should need to work for things to make them a reality.   
+I am going to encourage you to sit down with your family/significant other tonight and take the time to evaluate the goals your are currently pursuing and seeing if the decisions and potential concessions you are currently making will help you achieve those goals.   
+If you are reading this and you realize that you have just been 'coasting' I am going to stress the importance of the simple act of writing down a set of goals. This could potentially be a page turning day when you sit down to really question what is important to your life and career and how you are going to work towards making these goals a reality.   
+As one of my past students so aptly put: "The destination is the journey"!!   
+Live and Develop with Passion!! 
+
+
+
+

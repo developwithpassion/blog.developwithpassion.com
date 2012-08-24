@@ -1,0 +1,20 @@
+---
+layout: post
+title: "Nothin But .Net 2010"
+comments: true
+date: 2010-01-18 09:00
+categories:
+- training
+---
+
+This is a quick post to let people know that [Nothin But .Net](http://www.developwithpassion.com/training.oo) will be making its way around the world once again this year. We are still finalizing the final course schedule which takes a bit of time due to securing venues. Unlike last year, we are going to make sure that once the course schedule is published, that people will know immediately the venue it is going to be hosted at.   
+For the 2010 year the public courses are going to be in the following countries:   <ul>   <li>Australia </li>    <li>Canada</li>    <li>England</li>    <li>USA (yes, visa issues have been sorted out!!)     
+</li> </ul>  
+We expect to have the finalized schedule out by the end of February, with the first course happening in late April/early May.   
+One of the major changes that is taking place this year is with respect to the course hours. Past courses have been known for their extremely long days. For the 2010 year the course hours are going to be fixed at 8AM to 9PM. The last course of 2009 was able to closely adhere to this schedule and personally I feel it is much more maintainable than what some previous classes have had to deal with!!   
+Are you not able to make it out to a public course? Consider the option of bringing me on site to train your team privately. If this is something that may be of interest please contact me directly at jp@developwithpassion.com.   
+I look forward to seeing and meeting many new people this year who are looking forward to Develop With Passion!! 
+
+
+
+

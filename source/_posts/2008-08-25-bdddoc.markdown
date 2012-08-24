@@ -1,0 +1,157 @@
+---
+layout: post
+title: "BDDDoc"
+comments: true
+date: 2008-08-25 09:00
+categories:
+- tools
+---
+
+For the last couple of [courses](http://developwithpassion.com/training.oo) I have been using a tool to generate simple natural language reports using simple BDD Naming Styles. Just so everyone knows, the insipiration for this tool came from Scott Bellware and his tool SpecUnit. The only different between the tools is bdddoc is really just a categorization/reporting tools for your tests.  
+People who are already trying to adopt a more BDD oriented approach to writing their tests will find the tool useful for generating natural english reports from the testfixtures in your project.  
+If you run the tool against the prep exercise that I posted a while ago, you would get the following [report]({{ site.cdn_root }}binary/2008/august/25/bdddoc/SpecReport.html).  
+To use the tool you simply add a reference to the bdddoc.dll from the project that contains your test. There is only one attribute that means anything of significance:  
+  
+{% codeblock lang:csharp %}
+using System;
+namespace bdddoc.core 
+{
+  [AttributeUsage(AttributeTargets.Class)] public class ConcernAttribute : Attribute 
+  {
+    public Type concerned_with 
+    {
+      get;
+      private set;
+    }
+    public ConcernAttribute(Type concern) 
+    {
+      this.concerned_with = concern;
+    }
+  }
+}
+{% endcodeblock %}
+
+
+
+With this attribute in hand all you have to do is mark up your test fixtures with the Concern attribute. Here is an example of one full test fixture.
+
+
+
+
+
+{% codeblock lang:csharp %}
+using bdddoc.core;
+using bdddoc.spechelpers;
+using Observation = MbUnit.Framework.TestAttribute;
+
+namespace bdddoc.domain
+{
+    [Concern(typeof (ConcernFactory))]
+    public class when_a_concern_factory_is_told_to_create_a_concern_from_a_type : ContextSpecification<IConcernFactory>
+    {
+        private IConcern concern;
+        private IObservationSpecification observation_specification;
+
+        protected override void establish_context()
+        {
+            observation_specification = dependency<IObservationSpecification>();
+            observation_specification.setup_result(x => x.IsSatisfiedBy(null)).IgnoreArguments().Return(true);
+
+            sut = create_sut();
+        }
+
+
+
+        protected override void because()
+        {
+            concern = sut.create_concern_from(typeof (when_a_decimal_is_told_to_subtract_itself_to_another_number), observation_specification);
+        }
+
+
+        [Observation]
+        public void should_create_a_concern_with_the_correct_bdd_style_name()
+        {
+            concern.name.should_be_equal_to(typeof (when_a_decimal_is_told_to_subtract_itself_to_another_number).Name.as_bdd_style_name());
+        }
+
+        [Observation]
+        public void should_create_a_concern_populated_with_all_of_the_observations_satisfied_by_the_specification()
+        {
+            concern.total_number_of_observations.should_be_equal_to(3);
+        }
+
+        protected override IConcernFactory create_sut()
+        {
+            return new ConcernFactory();
+        }
+    }
+}
+{% endcodeblock %}
+
+
+
+
+
+Don't be too put off by the naming style. Notice how I am making use of aliasing to alias the TestAttribute to use the word Observation. This eliminates the need to add another attribute to the bdddoc assembly. This also means that once you have placed the concern attribute on your test fixtures (keep in mind that the type argument for the constructor is the System Under Test) you will be able to run bdddoc again nunit, mbunit, or others (so far it has only been tested with mbunit and nunit).
+
+
+When bdddoc is run (assuming that the class above was the only test fixture in the assembly, you would get the following output:
+
+
+
+
+<h1>Concerns: 1 - Observations: 2</h1>
+
+<ul>
+  <li>Behaviour of: ConcernFactory [ 1 Concern(s) , 2 Observation(s) ] 
+    <ul>
+      <li>when a concern factory is told to create a concern from a type 
+        <ul>
+          <li>should create a concern with the correct bdd style name </li>
+
+          <li>should create a concern populated with all of the observations satsified by the specification </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+
+
+
+This post is not going to talk about how I currently organize my contexts and observations (fixtures/tests respectively). After either the next course in London or the one in Dusseldorf in September, I am going to update the google code project for the Nothin But .Net store project to demonstrate some more complex tests that make use of mock, separating contexts etc.
+
+
+Here is the build task that I use to run the report for my projects:
+
+{% codeblock xml %}
+<target name="run.test.report" depends="setup.test">
+    <exec program="bdddoc.console.exe"
+        basedir="${third.party.tools.dir}\bdddoc\bin"
+        workingdir="${build.artifacts.dir}">
+        <arg file="${build.artifacts.dir}\${nothinbutdotnetprep.lib}"/>
+        <arg value="TestAttribute"/>
+        <arg file="${build.artifacts.dir}\SpecReport.html"/>
+    </exec>
+</target>
+{% endcodeblock %}
+
+
+The source code for the project can be downloaded [here]({{ site.cdn_root }}binary/2008/august/25/bdddoc/bdddoc.rar). I am going to place it up on my google code space, but currently I have having trouble with the account.
+
+
+This project was built very quickly in a top down fashion, at the end of the day it is simply reflection and text writing. I just find working top down a very quick way to solve a problem, with the side effect of potentially more players brought into the mix (see the interfaces and classess!!). You can take a look at a lot of the tests to get a feel for how I am making use of AAA style testing and extension methods everyone to support more fluent testing. Feel free to change the code anywhere you see fit. If you add anything cool, please try and get it back to me to share with the rest of the community. Right now the actual report writer (SimpleHtmlReportWriter) is just that, very simple!! If anyone feels like submitting a writer that uses some XSL and some nice stylesheets, it would be great!!
+
+
+To build the project just point a command prompt to the build folder and type the following command: build package. This will place the console runner and dll into the following folder <strong>build\latestpackage.</strong>
+
+
+If you just want to get the binaries download [this file]({{ site.cdn_root }}binary/2008/august/25/bdddoc/bdddoc.binaries.rar) and extract.
+
+
+Develop With Passion!!
+
+
+
+
