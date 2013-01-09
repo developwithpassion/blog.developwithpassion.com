@@ -9,7 +9,7 @@ The Develop With Passion® 2013 course schedule is now [online](http://developwi
 
 Currently the course load is small, but you can expect to see additions as Jon and I coordinate further iterations of the [Gamecrash](http://www.developwithpassion.com/training/game_crash) bootcamp over the course of the year.
 
-My personal course load for this year is cut down a little as our family is looking forward to a bit more time at home this year. Personally, I will be hosting courses in the following locations:
+Personally, I will be hosting courses in the following locations:
 
 * Calgary,AB
 * Denver, CO
