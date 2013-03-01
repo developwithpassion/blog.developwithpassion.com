@@ -7,7 +7,7 @@ categories: [training]
 ---
 It occurred to me a couple of years ago, that there really is no such thing as attaining mastery of software development. We are all just at different stages of beginning.
 
-When I was running a Software Craftmanship bootcamp in the UK a couple of years one of the attendees was kind enough to give me a copy of the book Bushido - The Way of the Samurai. He felt that a lot of the concepts that I was both demonstrating and talking about, were reflected in a lot of the ideas in the book. It really is a fantastic book on the subject of "pursuing mastery". Software developers in general spend a lot of time trying to "attain mastery". The only problem with his endeavour
+When I was running a Software Craftmanship bootcamp in the UK a couple of years one of the attendees was kind enough to give me a copy of the book Bushido - The Way of the Samurai. He felt that a lot of the concepts that I was both demonstrating and talking about, were reflected in a lot of the ideas in the book. It really is a fantastic book on the subject of "pursuing mastery". Software developers in general spend a lot of time trying to "attain mastery". The only problem with this endeavour
 is that they can often trick themselves into falsely feeling like they have "attained it". This can often result in the following set of events happening:
 
 * Establishing themselves as a subject matter expert in one or more areas
