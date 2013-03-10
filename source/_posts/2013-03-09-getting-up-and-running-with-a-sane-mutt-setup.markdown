@@ -126,6 +126,18 @@ brew install mutt
 
 
 
+##Configuring gpg
 
 
+##Access GMail Contacts In Vim Header Fields Using goobook
 
+Install python if you don't already have it:
+{% codeblock Install Python - install_python.sh }  
+brew install python
+{% endcodeblock }
+
+
+Install goobook:
+{% codeblock Install goobook - install_goobook.sh }  
+pip install goobook
+{% endcodeblock }
