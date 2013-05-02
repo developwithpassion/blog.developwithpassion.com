@@ -1,13 +1,13 @@
 ---
 layout: post
 title: "Getting Up And Running With A Sane Mutt Setup"
-date: 2013-03-09 06:58
+date: 2013-05-02 09:58
 comments: true
 categories: [mouseless, unix]
 ---
 Well, for the last 2 months I have been using [Mutt](http://www.mutt.org/) as my primary email client, and I have not missed gmail at all!!
 
-I spend the majority of my day inside a shell based environment, and a large majority of my workflow/tooling has been heavily modded to allow me to do pretty much all of my activities from a shell.
+I spend the majority of my day inside a shell based environment, and a large majority of my workflow/tooling has been heavily modded to allow me to do the majority of my computer related activities from a shell.
 
 * I edit all my code in vim
 * I manage keychain entries using the command line clients
@@ -21,7 +21,7 @@ I have occassionally messed around with using [links]() as a browser client. In 
 
 ##Focused, specific tools that do one job and do it well
 
-This post is mostly for my own journalling purposes, but I am sharing it in the event that it proves useful to others. If you are running on osx, I am going to strongly recommend that you install the [homebrew]() package manager, as that is what I use, to install other programs.
+This post is mostly for my own journalling purposes, but I am sharing it in the event that it proves useful to others. If you are running on osx, I am going to strongly recommend that you install the [homebrew](http://mxcl.github.io/homebrew/) package manager, as that is what I use, to install other programs.
 
 This post will outline the way that I setup the following tools:
 
@@ -37,10 +37,10 @@ As noted above, you will more than likely want to install [homebrew](http://docs
 
 ##Installing and configuring offlineimap
 
-After a brief 30 minute sessions messing around with mutt as a simple gmail client I was running into a lot of annoying "freezes". I came to the conclusion that using mutt as a replacement for the Gmail web interface would not really bring me a lot of the benefits that I wanted from a shell based email interface. I decided that it would be handy to be able to manage email offline, which would allow me to not have to connect to gmail unless I
+After a brief 30 minute session messing around with mutt as a simple gmail client I was running into a lot of annoying "freezes". I came to the conclusion that using mutt as a replacement for the Gmail web interface would not really bring me a lot of the benefits that I wanted from a shell based email interface. I decided that it would be handy to be able to manage email offline, which would allow me to not have to connect to gmail unless I
 actually needed to send emails or synchronize local changes. To that end I decided to go with [offlineimap](http://offlineimap.org/) to download a complete copy of my gmail imap folders and be able to deal with mail completely offline if need be.
 
-As is the case with the rest of the tools in this guide, the install process is a snap, the configuration process is a little involved. I installed the current version of offlineimapTo install offline imap just type the following in a shell:
+As is the case with the rest of the tools in this guide, the install process is a snap, the configuration process is a little involved. I installed the current version of offlineimap.  To install offline imap just type the following in a shell:
 
 {% codeblock Install Homebrew - install.sh %}  
 brew install offlineimap
@@ -65,7 +65,7 @@ Ok, so I configured things appropriately and was ready to kick off offlineimap t
 cert_fingerprint = 6d1b5b5ee0180ab493b71d3b94534b5ab937d042 
 {% endcodeblock %}
 
-With that change in place (keep in mind, the fingerprint can change at a later time, which would require this line to be updated), things looked good to go, I reran offlineimap and went about with other work while our country network connection proceeded to choke on the download for the next couple of hours.
+With that change in place (keep in mind, the fingerprint can change at a later time, which would require this line to be updated), things looked good to go, I reran offlineimap and went about with other work while our blazingly fast connection proceeded to choke on the download for the next couple of hours.
 
 Here is the majority of the pertinent stuff from my current configuration:
 
@@ -126,7 +126,7 @@ folderfilter = is_included
 {% endcodeblock %}
 
 You can check out Steves post for a very thorough explanation of the configuration that matches. I took advantage of the python file to DRY up my configuration for the nametrans setting. When you are working with one of the remote repositories (jp_developwithpassion_gmail_remote) in one of the examples above; the nametrans setting determines how to map the remote imap folder names to names on your local machine. In the examples on the offlineimap site, they would set up reverse entries in
-the nametrans for the local and remote options. That would look something like this (lifted from the offlineimap site):
+the nametrans for the local and remote options. That would look something like this (lifted from some standard example online):
 
 {% codeblock nametrans configuration - nametrans.ini %}
 [Repository blah-Local]
@@ -291,7 +291,7 @@ One of the cool things about the offlineimap configuration is that you can speci
 
 ##Installing Mutt
 
-Next up it was time to get going with mutt. Mutt at its core is a text-based mail client. For the purpose of my setup, I am going to be using it to primarily read and compose messages. It has out of the box support to be able to interface with gmail, and its own smtp utility, but I prefer to use msmtp as I have used it consistently without issues for years. To that end, most of the configuration for mutt will be setting it up to basically be able to work with the local copy of messages
+Next up it was time to get going with mutt. Mutt at its core is a text-based mail client. For the purpose of my setup, I am going to be using it to primarily read and compose messages. It has out of the box support to be able to interface with gmail, and its own smtp utility, but I configured it to use msmtp for smpt. To that end, most of the configuration for mutt will be setting it up to basically be able to work with the local copy of messages
 that gets pulled down by offlineimap.
 
 Let's install it:
@@ -302,7 +302,7 @@ brew install mutt
 
 ##Configuring gpg
 
-As I am currently working with a client that requires encrypted messages for all internal communications, it was necessary for me to setup and configure mutt with gpg encryption. I am using [GPGTools for OSX](https://gpgtools.org/). After installing and setting up my necessary keys, here is the config that I need to place in the file ~/.mutt/gpg.rc (your file location may vary), this is only a slight modification of the stock gpg configuration.
+As I am currently working with a client that requires encrypted messages for all internal communications, it was necessary for me to setup and configure mutt with encryption. I am using [GPGTools for OSX](https://gpgtools.org/). After installing and setting up my necessary keys, here is the config that I needed to place in the file ~/.mutt/gpg.rc (your file location may vary), this is only a slight modification of the stock gpg configuration.
 
 {% codeblock GPG Configuration - gpg.sh %}  
 # -*-muttrc-*-
@@ -377,7 +377,7 @@ source ~/.mutt/gpg.rc
 
 The keybinding allows me to hit p after I have composed a message, and it will bring up all of the options I can apply to my mail (sign, encrypt, ...)
 
-##Access GMail Contacts In Vim Header Fields Using goobook
+##Accessing GMail Contacts 
 
 Another piece of the puzzle was for me to be able to access my gmail contacts through mutt. To do that I leveraged a python utility called [goobook](http://code.google.com/p/goobook/).
 
@@ -403,7 +403,7 @@ The first settings tells mutt which utility to use to query for contact completi
 
 ##Mail Searching With notmuch
 
-The last piece of the puzzle was being able to locally search email. I accomplished this by setting up [notmuch](http://notmuchmail.org/). Getting going was as simple as running:
+One of the last pieces of the puzzle was being able to locally search email. I accomplished this by setting up [notmuch](http://notmuchmail.org/). Getting going was as simple as running:
 
 {% codeblock Installing notmuch- not_much_setup.sh %}
 brew install notmuch
@@ -494,7 +494,7 @@ run parse_arguments
 
 ##Sending Mail
 
-Up to this point I have only talked about a scenario optimized for reading mail. One of the main things you will also want to be able to do is send mail. Mutt has support for smtp, but there are more robust programs out there that only focus on smtp. One of those programs is [ msmtp ](http://msmtp.sourceforge.net/). This is program that I configured mutt to use to do mail sending.
+Up to this point I have only talked about a scenario optimized for reading mail. One of the main things you will also want to be able to do is send mail. Mutt has support for smtp, but there are more robust programs out there that only focus on smtp. One of those programs is [ msmtp ](http://msmtp.sourceforge.net/). This is the program that I configured mutt to use to do mail sending.
 
 Installing is a simple as:
 
@@ -637,4 +637,11 @@ As you can see, this solution makes the assumption that I write attachments to t
 
 ##Conclusion
 
-It took a couple of days for me to tweak my keybindings and customize my setup.  After the initial rampup, I love that I can now compose, read, edit my email in Vim. I can quickly add support for new mime types if I don't currently handle them. I can send encrypted messages, easily add attachments, read my mail fully offline, and I can only not get caught with the noise of notifications etc, as I choose when I explicitly refresh my mail.
+It took a couple of days for me to tweak my keybindings and customize my setup.  After the initial rampup, I love that I can now compose, read, edit my email in Vim, here is a [screenshot](https://www.evernote.com/shard/s52/sh/aac37c0a-93d4-4725-b06e-568a116d0275/debdc82b2efcbd43033a426eeb6fb66f/deep/0/2013-05-02%201:48%20PM.png) of what my gtd window in tmux looks like:
+
+{% img https://www.evernote.com/shard/s52/sh/aac37c0a-93d4-4725-b06e-568a116d0275/debdc82b2efcbd43033a426eeb6fb66f/deep/0/2013-05-02%201:48%20PM.png Tmux GTD Pane %}
+
+
+Needless to say, the screenshot says it all (from my perspective!!)
+
+[Develop With Passion®](http://www.developwithpassion.com)
