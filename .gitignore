@@ -13,3 +13,5 @@ vendor
 node_modules
 _generated
 .rvmrc
+.ruby-version
+.ruby-gemset
