@@ -58,7 +58,7 @@ gemset = gemset_name(Dir.pwd)
 `echo #{ruby_version} > .ruby-version`
 `echo #{gemset} > .ruby-gemset`
 
-{% endcodeblock }
+{% endcodeblock %}
 
 This file is marked executable and in my path (I name it rvmgsc). Whenever I enter a new folder that I want a gemset for I can call it either with an argument of the ruby version that I want to use. If I don't pass any arguments it will list the ruby versions that I have and let me choose. The script will then continue to make an .ruby-version and .ruby-gemset file, with the correct contents.
 
