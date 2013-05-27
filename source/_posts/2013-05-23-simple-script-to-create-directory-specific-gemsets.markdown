@@ -11,7 +11,7 @@ I don't ever keep my .ruby-version or .ruby-gemset files (or the old .rvmrc) und
 
 Here is the script that I use to create a new .ruby-version and .ruby-gemset in the current folder that I am in:
 
-{% codeblock RVM Gemset Create - rvmgsc %}
+{% codeblock lang:ruby RVM Gemset Create - rvmgsc %}
 #!/usr/bin/env ruby
 def rubies
   ruby_pattern = /\s*(ruby-.*)\s\[/
