@@ -1,0 +1,3 @@
+#!/bin/bash
+
+vi source/_posts/$(ls source/_posts | sort -r | head -n 1)
