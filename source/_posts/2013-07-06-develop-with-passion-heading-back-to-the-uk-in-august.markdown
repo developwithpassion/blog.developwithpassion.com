@@ -31,7 +31,7 @@ Regardless of your skill level, it is very difficult to come away from this cour
 - Work/Life balance
 - Goal Planning
 
-The course will be taking place at an “as yet to be announced” location in the heart of London. If you want to find more information about the course, or to register, go here:
+The course will be taking place at the Ramaan “as yet to be announced” location in the heart of London. If you want to find more information about the course, or to register, go here:
 
 http://www.eventbrite.com/event/5176294436
 
