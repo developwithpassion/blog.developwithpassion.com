@@ -5,7 +5,7 @@ date: 2013-07-06 11:04
 comments: true
 categories: [training]
 ---
-The Develop With Passion - Software Craftmanship Bootcamp is Once again making its way back to the UK. The course is schedule for the week of the 22nd of August, and will once again be run in London.
+The Develop With Passion - Software Craftmanship Bootcamp is Once again making its way back to the UK. The course is scheduled for the week of the 22nd of August (next month), and will once again be run in London.
 
 If you are not familiar with the course, here are the things you can expect out of the 5 crazy days!:
 
@@ -31,9 +31,8 @@ Regardless of your skill level, it is very difficult to come away from this cour
 - Work/Life balance
 - Goal Planning
 
-The course will be taking place at the Ramaan “as yet to be announced” location in the heart of London. If you want to find more information about the course, or to register, go here:
+The course was originally scheduled to be held in Manchester, but has since been moved back to London!
 
-http://www.eventbrite.com/event/5176294436
+Register for the course [here](http://www.eventbrite.com/event/5176294436)
 
 [Develop With Passion®](http://www.developwithpassion.com)
-
