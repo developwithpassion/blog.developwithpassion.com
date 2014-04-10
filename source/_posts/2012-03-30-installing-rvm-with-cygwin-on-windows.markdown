@@ -37,6 +37,8 @@ If you don't wish to read that previous post just know I installed cygwin to C:\
 * Libs
   * zlib
   * zlib-devel
+  * libyaml
+  * libyaml-dev
 * Utils
   * ncurses - Enabling better handling of terminal
   * patch - Apply a diff file to an original. Again, you'll need it when rvm is trying to patch the ruby installs
