@@ -7,8 +7,6 @@ categories: [presentations]
 ---
 These links are the links to both the slideshow for my recent presentation, as well as references to the resources that I mentioned during the talk:
 
-##Developing With Passion
-
 * [Prezi Presentation](http://prezi.com/svtff5gr4exj/?utm_campaign=share&utm_medium=copy)
 * [Outliers](http://www.amazon.com/Outliers-Story-Success-Malcolm-Gladwell/dp/0316017930)
 * [Codility](https://codility.com/)
