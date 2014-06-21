@@ -18,11 +18,6 @@ To do that just run:
 lsof -i :[port_number] 
 {% endcodeblock %}
 
-
-{% codeblock lang:bash %}
-lsof -i :[port_number] 
-{% endcodeblock %}
-
 As an example (using port 80), this is the output I get:
 
 {% codeblock lang:bash %}
