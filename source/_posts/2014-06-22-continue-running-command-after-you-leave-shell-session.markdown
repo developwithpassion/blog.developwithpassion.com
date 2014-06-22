@@ -5,7 +5,7 @@ date: 2014-06-22 16:12
 comments: true
 categories: [unix]
 ---
-This post, along with many others to come is serving as a pointer to people that I have worked/will work with about lots of useful unix utilities. Where there are existing good reference I will just post a link, otherwise I'll write my own post. Current time demands warrant that I'm going to be link posting a lot!!
+This post, along with many others to come is serving as a pointer to people that I have worked/will work with about lots of useful unix utilities. Where there is an existing good reference I will just post a link, otherwise I'll write my own post. Current time demands warrant that I'm going to be link posting a lot!!
 
 The tools are not mentioned in any particular order, so don't place any significance on which order I choose to mention them.
 
