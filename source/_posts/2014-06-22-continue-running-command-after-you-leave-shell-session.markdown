@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Unix tool #1- nohup
+title: Unix Tool 1 - nohup
 date: 2014-06-22 16:12
 comments: true
 categories: [unix]
