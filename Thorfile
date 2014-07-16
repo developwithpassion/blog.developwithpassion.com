@@ -42,9 +42,8 @@ header
 
   desc 'promote a draft to a post', 'Publish a post stored in the drafts folder'
   def promote_draft
-    drafts = Dir.glob("_drafts/*.*")
-    titles = drafts.map { |draft| get_file_details(draft)[:headers]["title"] }
-    post = drafts[pick_from_list(titles, "Which post do you want to publish?:")]
+    current_drafts = Dir.glob("_drafts/*.*")
+    post = pick_from_list(drafts, title_mapper, "Which post do you want to publish?:")
     publication_date = Time.now
     long_date = publication_date.strftime("%Y-%m-%d %H:%M")
     short_date = publication_date.strftime("%Y-%m-%d")
@@ -65,6 +64,12 @@ header
     FileUtils.mv post, updated_file_name
   end
 
+  desc 'edit_draft', 'Edit an existing draft'
+  def edit_draft
+    file = pick_from_list(drafts, title_mapper, "Which draft do you want to edit")
+    system("vim #{file}")
+  end
+
   no_commands do
     def get_file_details(file)
       contents = File.read(file).split(/^---\s*$/)
@@ -74,13 +79,21 @@ header
       { headers: header, body: contents[2] }
     end
 
-    def pick_from_list(list, prompt)
+    def drafts
+      Dir.glob("_drafts/*.*")
+    end
+
+    def pick_from_list(list, mapper, prompt)
       list.each_with_index do |item, index|
-        puts "#{index + 1}: #{item}"
+        puts "#{index + 1}: #{mapper.call(item)}"
       end
 
       index = ask(prompt).to_i
-      index - 1
+      list[index - 1]
+    end
+
+    def title_mapper
+      return -> (post) { get_file_details(post)[:headers]["title"] }
     end
   end
 end
