@@ -9,7 +9,7 @@ Had to generate a new ssh key and cert request the other day for a dreamhost ser
 
 Here is the script that I used to generate a new private key and csr request to submit to the certificate authority:
 
-{% codeblock lang: bash %}
+{% codeblock lang:bash %}
 openssl req -nodes --newkey rsa:2048 --keyout new_key.key -out new_csr.csr
 {% endcodeblock %}
 
