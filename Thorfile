@@ -13,6 +13,8 @@ class Default < Thor
   def new_post
     title = ask("What is the title:")
     future = ask("Future post?", limited_to: ['y', 'n']) == 'y'
+    categories = ask("Categories?") 
+    categories = categories.strip == "" ? "general" : categories
     target_dir = future ? "_drafts" : "source/posts"
     filename = future ? "#{title.to_url}.markdown" : "#{target_dir}/#{Time.now.strftime('%Y-%m-%d')}-#{title.to_url}.markdown"
     filename = File.join(target_dir, filename)
@@ -25,10 +27,11 @@ class Default < Thor
     body = <<header
 ---
 layout: post
-title: "#{title.gsub(/&/, '&amp;')}"
+title: \"#{title.gsub(/&/, '&amp;')}\"
 date: #{Time.now.strftime('%Y-%m-%d %H:%M')}
 comments: true
-categories:
+published: #{!future}
+categories: [#{categories}]
 ---
 header
     open(filename, 'w') do |post|
@@ -41,7 +44,7 @@ header
   def promote_draft
     drafts = Dir.glob("_drafts/*.*")
     titles = drafts.map { |draft| get_file_details(draft)[:headers]["title"] }
-    post = drafts[pick_from_list(titles, "Which post do you want to publish")]
+    post = drafts[pick_from_list(titles, "Which post do you want to publish?:")]
     publication_date = Time.now
     long_date = publication_date.strftime("%Y-%m-%d %H:%M")
     short_date = publication_date.strftime("%Y-%m-%d")
@@ -50,6 +53,7 @@ header
     details = get_file_details(post)
     headers = details[:headers]
     headers["date"] = long_date
+    headers["published"] = true
 
     File.open(post, 'w+') do |file|
       file.puts YAML::dump(headers)
@@ -72,10 +76,10 @@ header
 
     def pick_from_list(list, prompt)
       list.each_with_index do |item, index|
-        puts "#{index + 1}: item"
+        puts "#{index + 1}: #{item}"
       end
 
-      index = ask("Which post do you want to publish?").to_i
+      index = ask(prompt).to_i
       index - 1
     end
   end
