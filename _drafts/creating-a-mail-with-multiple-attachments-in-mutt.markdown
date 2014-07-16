@@ -9,3 +9,6 @@ video: true
 comments: true
 categories: [mutt, unix]
 ---
+This video shows you how to create an email with attachments in Mutt.
+
+[Develop With Passion®](http://www.developwithpassion.com)
