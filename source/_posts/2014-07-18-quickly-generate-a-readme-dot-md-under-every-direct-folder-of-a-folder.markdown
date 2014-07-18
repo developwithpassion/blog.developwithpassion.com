@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Quickly generate a README.md under every direct folder of a folder"
+title: "Quickly generate a README under every direct folder of a folder"
 date: 2014-07-18 10:54
 comments: true
 published: true
