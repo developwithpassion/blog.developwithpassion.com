@@ -16,7 +16,7 @@ class Default < Thor
     future = ask("Future post?", limited_to: ['y', 'n']) == 'y'
     categories = ask("Categories?") 
     categories = categories.strip == "" ? "general" : categories
-    target_dir = future ? "_drafts" : "source/posts"
+    target_dir = future ? "_drafts" : "source/_posts"
     filename = future ? "#{title.to_url}.markdown" : "#{Time.now.strftime('%Y-%m-%d')}-#{title.to_url}.markdown"
     filename = File.join(target_dir, filename)
 
