@@ -1,5 +1,6 @@
 require "thor/rake_compat"
 require "stringex"
+require "fileutils"
 
 class Default < Thor
   include Thor::RakeCompat
@@ -16,9 +17,8 @@ class Default < Thor
     categories = ask("Categories?") 
     categories = categories.strip == "" ? "general" : categories
     target_dir = future ? "_drafts" : "source/posts"
-    filename = future ? "#{title.to_url}.markdown" : "#{target_dir}/#{Time.now.strftime('%Y-%m-%d')}-#{title.to_url}.markdown"
+    filename = future ? "#{title.to_url}.markdown" : "#{Time.now.strftime('%Y-%m-%d')}-#{title.to_url}.markdown"
     filename = File.join(target_dir, filename)
-    mkdir_p target_dir
 
     if File.exist?(filename)
       exit if ask("#{filename} already exists. Do you want to overwrite?:", limited_to: ['y', 'n']) == 'n'
@@ -61,13 +61,19 @@ header
       file.puts "\n"
     end
 
-    FileUtils.mv post, updated_file_name
+    FileUtils.cp post, updated_file_name
   end
 
   desc 'edit_draft', 'Edit an existing draft'
   def edit_draft
     file = pick_from_list(drafts, title_mapper, "Which draft do you want to edit")
     system("vim #{file}")
+  end
+
+  desc 'delete_draft', 'Edit an existing draft'
+  def delete_draft
+    file = pick_from_list(drafts, title_mapper, "Which draft do you want to edit")
+    FileUtils.rm file
   end
 
   no_commands do
