@@ -31,7 +31,6 @@ gives me this:
 ./matching
 ./namespace
 ./node_bootstrap
-./node_modules
 ./resolution_root
 {% endcodeblock %}. 
 
