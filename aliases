@@ -1,0 +1,4 @@
+alias ed='bundle exec thor :edit_draft'
+alias np='bundle exec thor :new_post'
+alias erp='vi source/_posts/$(ls source/_posts | sort -r | head -n 1)'
+alias pts='bundle exec rake dwp:push_to_server'
