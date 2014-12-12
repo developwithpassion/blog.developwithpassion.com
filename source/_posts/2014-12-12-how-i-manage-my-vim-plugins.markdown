@@ -6,7 +6,7 @@ comments: true
 published: true
 categories: [vim]
 ---
-Way before tools like Vundler and the like came out for vim, as a perpetual automation junkie, I was constantly refining my workbench when it came to how to manage my vim plugins. What started off as a basic script has turned into a tiny ruby configuration tool that I can use to manage the downloading of my vim plugins. As a play on the tool it is mimics, I've called in VRundler, and since it evolved (very slightly) from basic script I wrote, there is no coverage (gasp!). I've ran my current configuration script
+Way before tools like Vundler and the like came out for vim, as a perpetual automation junkie, I was constantly refining my workbench when it came to how to manage my vim plugins. What started off as a basic script has turned into a tiny ruby configuration tool that I can use to manage the downloading of my vim plugins. As a play on the tool it is mimics, I've called in [VRundler](https://github.com/developwithpassion/vrundler), and since it evolved (very slightly) from basic script I wrote, there is no coverage (gasp!). I've ran my current configuration script
 successfully on Windows, OSX, and Linux and it works great. I'm just throwing this out there to demonstrate how I manage one of my tools. I'm not remotely suggesting people use this in place of Vundle, this is just another example of a different style of automation. Here is my current configuration script:
 
 ```ruby
