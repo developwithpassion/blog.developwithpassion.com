@@ -71,22 +71,25 @@ system("sed 's/cert_fingerprint =.*/cert_fingerprint = #{finger_print}/' #{imap_
 This simple ruby script just does the following:
 
 1. Write the current contents of the tmux pane I am in, to a file that can be worked with:
-  ```ruby
-  `tmux capture-pane`
-  `tmux save-buffer #{buffer_file}`
-  ```
+
+```ruby
+`tmux capture-pane`
+`tmux save-buffer #{buffer_file}`
+```
 2. Find the new ssl fingerprint that should be used:
-  ```ruby
-  contents = IO.readlines(buffer_file).join(' ')
 
-  exit unless pattern =~ contents
+```ruby
+contents = IO.readlines(buffer_file).join(' ')
 
-  finger_print = pattern.match(contents)[1]
-  ```
+exit unless pattern =~ contents
+
+finger_print = pattern.match(contents)[1]
+```
 3. Update the contents of the current configuration file with the new fingerprint:
-  ```ruby
-  system("sed 's/cert_fingerprint =.*/cert_fingerprint = #{finger_print}/' #{imap_file} | tee #{imap_file}")
-  ```
+
+```ruby
+system("sed 's/cert_fingerprint =.*/cert_fingerprint = #{finger_print}/' #{imap_file} | tee #{imap_file}")
+```
 
 In the last line I am just shelling out to sed to do the transform on the config file and then tee'ing the output stream back to the config file itself.
 
