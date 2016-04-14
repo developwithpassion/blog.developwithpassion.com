@@ -6,6 +6,8 @@ comments: true
 published: true
 categories: [career, humour]
 ---
-I'm not sure if the person who posted the job posting that follows was being completely serious when they created the job write up [here](http://www.seek.com.au/job/30771191). Serious or not, the individual definitely has an awesome sense of humour
+I'm not sure if the person who posted [this](http://www.seek.com.au/job/30771191) job posting was being completely serious when they created it. 
+
+Serious or not, the individual definitely has an awesome sense of humour
 
 Develop With Passion®
