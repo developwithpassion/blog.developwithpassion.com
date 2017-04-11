@@ -1,5 +1,13 @@
-alias ed='bundle exec thor :edit_draft'
-alias np='bundle exec thor :new_post'
+alias thor='docker-compose run --rm shell thor'
+alias bundle='docker-compose run --rm shell bundle'
+alias gem='docker-compose run --rm shell gem'
+
+function clean_slate() {
+  docker-compose down
+}
+
+alias ed='vi $(thor :edit_draft)'
+alias np='vi $(thor :new_post)'
 alias erp='vi source/_posts/$(ls source/_posts | sort -r | head -n 1)'
 alias pts='bundle exec rake dwp:push_to_server'
 alias pd='bundle exec thor :promote'
