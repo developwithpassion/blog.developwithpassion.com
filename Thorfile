@@ -45,7 +45,7 @@ class Default < Thor
         categories: categories
       })
     end
-    system("vim #{filename}")
+    puts filename
   end
 
   desc 'promote a draft to a post', 'Publish a post stored in the drafts folder'
@@ -75,7 +75,7 @@ class Default < Thor
   desc 'edit_draft', 'Edit an existing draft'
   def edit_draft
     file = pick_from_list(drafts, title_mapper, "Which draft do you want to edit")
-    system("vim #{file}")
+    puts file
   end
 
   desc 'delete_draft', 'Edit an existing draft'
